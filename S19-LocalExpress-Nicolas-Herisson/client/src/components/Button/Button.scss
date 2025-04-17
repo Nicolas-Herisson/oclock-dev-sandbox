@@ -1,0 +1,9 @@
+button {
+    border: 1px solid #242424;
+    padding: 10px 10px;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,56 @@
+<%- include('partials/header') %>
+
+<%- include('partials/nav') %>
+
+    <!-- Corps de la page -->
+    <main class="profile-page">
+      <h1>Votre profil</h1>
+      <!-- Berlingot d'erreur pour afficher les erreurs -->
+       <% if (errorMessage !== "") { %>
+        <div class="form-error-block">
+          <%= errorMessage %>
+      </div>
+       <% } %>
+
+      <form
+        class="profile-form"
+        method="post">
+        <div class="profile-form__fieldset">
+          <label for="firstname">Prénom</label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="Votre prénom"
+            value="<%= locals.user.firstname %>"
+            />
+        </div>
+
+        <div class="profile-form__fieldset">
+          <label for="lastname">Nom de famille</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Votre nom"
+            value="<%= locals.user.lastname %>"
+            />
+        </div>
+
+        <div class="profile-form__fieldset">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="nom@mail.fr"
+            value="<%= locals.user.email %>"
+            />
+        </div>
+
+        <button type="submit">Mettre à jour</button>
+      </form>
+    </main>
+
+
+<%- include('partials/footer') %>

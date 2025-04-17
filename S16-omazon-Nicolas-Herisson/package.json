@@ -1,0 +1,20 @@
+{
+  "name": "omazon",
+  "description": "omazon",
+  "keywords": [
+    "omazon"
+  ],
+  "author": "Nicolas Herisson",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "dev:back": "pnpm --filter ./packages/backend dev",
+    "dev:front": "pnpm --filter ./packages/frontend dev",
+    "dev:install": "pnpm --filter ./packages/backend install && pnpm --filter ./packages/frontend install",
+    "db:reset": "pnpm --filter ./packages/backend db:reset",
+    "lint": "pnpm --filter ./packages/frontend lint"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  }
+}

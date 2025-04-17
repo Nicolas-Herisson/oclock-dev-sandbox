@@ -1,0 +1,63 @@
+# Définition des services 
+services: 
+  main: # Définition du service nommé 'main'
+    container_name: main # Nom du conteneur
+    build: # le conteneur sera construit à partir du Dockerfile
+      context: .
+      dockerfile: ./main/Dockerfile
+    volumes:
+      # Montage du rép './main' du système hôte sur '/app' dans le conteneur
+      - ./main:/app 
+    ports:
+      # Mapping du port 3000 de l'hôte sur le port 3000 du conteneur
+      - "3000:3000" 
+    environment:
+      # link main with userdb
+      - MONGO_URL=mongodb://userdb:27017/demo
+      - AUTHENTIFICATION_SERVICE_URL=http://auth:3000
+      - JWT_SECRET=secret
+      - PORT=3000
+    depends_on:
+      - userdb
+  auth:
+    container_name: auth
+    build:
+      context: .
+      dockerfile: ./auth/Dockerfile
+    volumes:
+      - ./auth:/app
+    ports:
+      - "3001:3000"
+    environment:
+      - MONGO_URL=mongodb://userdb:27017/demo
+      - API_URL=http://api:3000
+      - JWT_SECRET=secret
+      - PORT=3000
+    depends_on:
+      - userdb
+  api:
+    container_name: api
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    volumes:
+      - ./api:/app
+    ports:
+      - "3002:3000"
+    environment:
+      - MONGO_URL=mongodb://userdb:27017/demo
+      - PORT=3000
+    depends_on:
+      - userdb
+  userdb:
+    image: mongo:latest
+    container_name: userdb
+    ports:
+      - "27017:27017"
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: demo
+    volumes:
+      - ./init-posts.js:/docker-entrypoint-initdb.d/init-posts.js:ro
+      - ./init-users.js:/docker-entrypoint-initdb.d/init-users.js:ro
+      - /data/db

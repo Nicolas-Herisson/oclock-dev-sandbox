@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+
+    <%- include('partials/header') %>
+
+    <main id="catalog" aria-labelledby="catalog main">
+      <div class="catalog">
+        <img src="/img/catalogBackground.jpg" alt="Background imge of coffee grain on a section">
+        <h1 aria-label="Text on background image : Our catalog">Notre catalogue</h1>
+      </div>
+
+      <%- include('partials/catalogForm') %>
+
+      <div class="products container">
+
+        <% for( const coffee of filteredCoffees ) { %>
+          <article class="product container" role="article" aria-labelledby="product frame">
+            <h3 aria-label="Coffee named " class="product name"><%= coffee.name %></h3>
+            <div aria-label="Coffee origin" class="product origin">Origine : <span><%= coffee.origin %></span></div>
+            <div aria-label="Coffee specification" class="product spec">Caractéristique principale : <span><%= coffee.spec %></span></div>
+            <p aria-label="Coffee description" class="product desc"><%= coffee.description %></p>
+            <a class="product button" href="/catalogue/<%= coffee.id %>" aria-label="Button discovery <%= coffee.name %>">Découvrir</a>
+          </article>
+        <% } %>
+      </div>
+      <% if (filteredCoffees.length > 3) { %>
+        <div class="button-container">
+          <button class="products button" aria-label="Button: show every coffees">Voir tous les cafés</button>
+        </div>
+      <% } %>
+      
+    </main>
+
+    <footer>
+      <%- include('partials/footer') %>
+    </footer>
+
+    <script defer src="/scripts/menu.js" ></script>
+    <script defer src="/scripts/displayProducts.js" ></script>
+  </body>
+
+
+</html>

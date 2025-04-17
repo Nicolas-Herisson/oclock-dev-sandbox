@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/pokeball.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/app.js" type="module"></script>
+</head>
+<body >
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          
+            <div class="navbar-end">
+                <a class="navbar-item navbar-button-pokemon">
+                    Pokemons
+                  </a>
+            
+                  <a class="navbar-item navbar-button-types">
+                    Types
+                  </a>
+
+                  <a class="navbar-item navbar-button-teams">
+                    Equipes
+                  </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+
+
+        <div class="flex-container">
+
+                    <!--  SEARCH BAR POKEMON PAGE -->
+            <div class="pokemon-page searchBar field has-addons">
+                <div class="control">
+                <input class="input" type="text" placeholder="nom du pokemon">
+                </div>
+                <div class="control">
+                <button class="button is-info">
+                    chercher
+                </button>
+                </div>
+            </div>
+
+            
+            <!--  SEARCH BAR ADD POKEMON TO TEAM PAGE -->
+            <div class="addPokemon-to-team searchBar field has-addons is-hidden">
+                <div class="control">
+                <input class="input" type="text" placeholder="nom du pokemon">
+                </div>
+                <div class="control">
+                <button class="button is-info">
+                    chercher
+                </button>
+                </div>
+            </div>
+
+            <div class="main-title my-6 is-size-2"></div>
+
+            <div class="team-button-container is-hidden"></div>
+
+            <div id="main-container" class=""></div>
+        </div>
+
+
+        <template id="pokemon-template">
+            <div class="pokemon-grid-cell">
+                <button class="pokemon-container my-3" >
+                    <div>
+                        <h1 class="pokemon-name">name</h1>
+                        <img class="pokemon-image" alt="">
+                    </div>
+                    <p class="pokemon-description">description</p>
+                    <div class="pokemon-number"></div>
+                    <div class="pokemon-type"></div>
+                    <div class="pokemon-evolution">evolution</div>
+                    <div class="pokemon-size">size</div>
+                    <div class="pokemon-weight"></div>     
+                </button>
+                <button class="pokemon-add-toTeam my-3 is-hidden">Ajouter</button>
+                <button class="pokemon-delete-toTeam my-3 is-hidden">Supprimer pokemon</button>
+            </div>
+        </template>
+
+        <template id="type-template">
+            
+            <button class="type-container mx-5 my-5">
+                <div class="type-name"></div>     
+            </button>
+
+        </template>
+
+        <template id="team-template">
+            <button class="team add-team my-6 is-hidden">Ajouter une equipe</button>
+            <button class="team update-team my-6 is-hidden">Modifier le nom de l'équipe</button>
+            <button class="team delete-team my-6 is-hidden">Supprimer l'équipe</button>
+            <button class="team add-pokemon-toTeam my-6 is-hidden">Ajouter un pokemon</button>
+            <button class="team-button team-container my-5">
+                <div class="team-position is-hidden"></div>
+                <div>
+                    <h2 class="team-name"></h1>
+                </div>
+            </button>
+
+        </template>
+
+        <form class="form-container is-hidden is-4">
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                <input class="input name" type="text" placeholder="Text input">
+                </div>
+            </div>
+            
+            <div class="field is-grouped">
+                <div class="control">
+                <button class="button is-link">Submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

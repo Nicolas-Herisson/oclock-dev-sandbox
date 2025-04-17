@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<%- include('partials/nav') %>
+
+    <!-- Corps de la page -->
+    <main class="tags-page">
+      <h1>Tous les sujets</h1>
+      <% for( const tag of tags ) { %>
+        <section class="tag__section">
+          <h2 class="tag__title"><%= tag.name %></h2>
+          <ul class="tag__quiz-list">
+            <% for( const quiz of tag.quizzes ) { %>
+              <li>
+                <a href="/quiz/<%= quiz.id %>"><%= quiz.title %></a>
+              </li>
+            <% } %>
+          </ul>
+        </section>
+      <% } %>
+
+    </main>
+
+<%- include('partials/footer') %><%- include('partials/header') %>
+
+<%- include('partials/nav') %>
+
+    <!-- Corps de la page -->
+    <main class="tags-page">
+      <h1>Tous les sujets</h1>
+      <% for( const tag of tags ) { %>
+        <section class="tag__section">
+          <h2 class="tag__title"><%= tag.name %></h2>
+          <ul class="tag__quiz-list">
+            <% for( const quiz of tag.quizzes ) { %>
+              <li>
+                <a href="/quiz/<%= quiz.id %>"><%= quiz.title %></a>
+              </li>
+            <% } %>
+          </ul>
+        </section>
+      <% } %>
+
+    </main>
+
+<%- include('partials/footer') %>
