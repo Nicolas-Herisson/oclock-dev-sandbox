@@ -110,13 +110,17 @@ S10 correspond à la 10ème semaine de la formation.
 
 ## Liens
 
-https://github.com/Nicolas-Herisson/S09-OCoffee-Nicolas-Herisson
-https://github.com/Nicolas-Herisson/S10-Oquiz-Nicolas-Herisson
-https://github.com/Nicolas-Herisson/S14-opokedex-Nicolas-Herisson
-https://github.com/Nicolas-Herisson/S16-omazon-Nicolas-Herisson
-https://github.com/Nicolas-Herisson/S19-LocalExpress-Nicolas-Herisson
-https://github.com/Nicolas-Herisson/S20-social-network-Nicolas-Herisson
+- [S09 - OCoffee](https://github.com/Nicolas-Herisson/S09-OCoffee-Nicolas-Herisson)
+- [S10 - Oquiz](https://github.com/Nicolas-Herisson/S10-Oquiz-Nicolas-Herisson)
+- [S14 - Opokedex](https://github.com/Nicolas-Herisson/S14-opokedex-Nicolas-Herisson)
+- [S16 - Omazon](https://github.com/Nicolas-Herisson/S16-omazon-Nicolas-Herisson)
+- [S19 - LocalExpress](https://github.com/Nicolas-Herisson/S19-LocalExpress-Nicolas-Herisson)
+- [S20 - Social Network](https://github.com/Nicolas-Herisson/S20-social-network-Nicolas-Herisson)
+
+---
 
 ## Contact
 
 Vous pouvez me contacter via linkedin `https://www.linkedin.com/in/nicolas-herisson/`.
+
+---
