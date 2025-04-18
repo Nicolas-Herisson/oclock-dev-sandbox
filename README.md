@@ -16,7 +16,7 @@
     - [Bonnes pratiques](#bonnes-pratiques)
   - [Quel est le but de ce répertoire ?](#quel-est-le-but-de-ce-répertoire-)
   - [Contenu](#contenu)
-  - [Liens](#liens)
+  - [Liens des projets](#liens-des-projets)
   - [Contact](#contact)
 
 ---
@@ -108,7 +108,7 @@ S10 correspond à la 10ème semaine de la formation.
 
 ---
 
-## Liens
+## Liens des projets
 
 - [S09 - OCoffee](https://github.com/Nicolas-Herisson/S09-OCoffee-Nicolas-Herisson)
 - [S10 - Oquiz](https://github.com/Nicolas-Herisson/S10-Oquiz-Nicolas-Herisson)
