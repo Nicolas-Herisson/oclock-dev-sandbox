@@ -117,6 +117,12 @@ S10 correspond à la 10ème semaine de la formation.
 - [S19 - LocalExpress](https://github.com/Nicolas-Herisson/S19-LocalExpress-Nicolas-Herisson)
 - [S20 - Social Network](https://github.com/Nicolas-Herisson/S20-social-network-Nicolas-Herisson)
 
+### Projet de fin d'étude
+
+
+- [GamerChallenge-front](https://github.com/Nicolas-Herisson/gamerChallenge-front)
+- [GamerChallenge-back](https://github.com/Nicolas-Herisson/gamerChallenge-back)
+
 ---
 
 ## Contact
